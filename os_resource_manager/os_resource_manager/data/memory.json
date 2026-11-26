@@ -1,0 +1,15 @@
+{
+  "description": "Page-replacement and contiguous-allocation datasets.",
+  "reference_string": [7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1],
+  "frames": 3,
+  "frame_sweep": [1, 2, 3, 4, 5, 6, 7],
+  "belady_string": [1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5],
+  "belady_frames": [1, 2, 3, 4, 5],
+  "blocks": [100, 500, 200, 300, 600],
+  "requests": [
+    {"pid": "P1", "size": 212},
+    {"pid": "P2", "size": 417},
+    {"pid": "P3", "size": 112},
+    {"pid": "P4", "size": 426}
+  ]
+}

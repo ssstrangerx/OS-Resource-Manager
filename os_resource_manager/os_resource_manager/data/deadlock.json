@@ -1,0 +1,28 @@
+{
+  "description": "Banker's algorithm state (resources A B C), resource requests, and two detection cases.",
+  "banker": {
+    "available": [3, 3, 2],
+    "allocation": [[0, 1, 0], [2, 0, 0], [3, 0, 2], [2, 1, 1], [0, 0, 2]],
+    "maximum":    [[7, 5, 3], [3, 2, 2], [9, 0, 2], [2, 2, 2], [4, 3, 3]],
+    "requests": [
+      {"process": 1, "request": [1, 0, 2]},
+      {"process": 4, "request": [3, 3, 0]},
+      {"process": 0, "request": [0, 2, 0]},
+      {"process": 3, "request": [1, 0, 0]}
+    ]
+  },
+  "detection": [
+    {
+      "name": "no deadlock",
+      "available": [0, 0, 0],
+      "allocation": [[0, 1, 0], [2, 0, 0], [3, 0, 3], [2, 1, 1], [0, 0, 2]],
+      "request":    [[0, 0, 0], [2, 0, 2], [0, 0, 0], [1, 0, 0], [0, 0, 2]]
+    },
+    {
+      "name": "deadlock",
+      "available": [0, 0, 0],
+      "allocation": [[0, 1, 0], [2, 0, 0], [3, 0, 3], [2, 1, 1], [0, 0, 2]],
+      "request":    [[0, 0, 0], [2, 0, 2], [0, 0, 1], [1, 0, 0], [0, 0, 2]]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "description": "Common CPU-scheduling workloads. Priority: smaller number = higher priority.",
+  "quantum": 3,
+  "quantum_sweep": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+  ],
+  "workloads": {
+    "mixed": {
+      "description": "Six processes with mixed burst times, staggered arrivals and different priorities.",
+      "processes": [
+        {
+          "pid": "P1",
+          "arrival": 0,
+          "burst": 8,
+          "priority": 3
+        },
+        {
+          "pid": "P2",
+          "arrival": 1,
+          "burst": 4,
+          "priority": 1
+        },
+        {
+          "pid": "P3",
+          "arrival": 2,
+          "burst": 9,
+          "priority": 4
+        },
+        {
+          "pid": "P4",
+          "arrival": 3,
+          "burst": 5,
+          "priority": 2
+        },
+        {
+          "pid": "P5",
+          "arrival": 5,
+          "burst": 2,
+          "priority": 5
+        },
+        {
+          "pid": "P6",
+          "arrival": 6,
+          "burst": 6,
+          "priority": 2
+        }
+      ]
+    },
+    "convoy": {
+      "description": "One long CPU-bound job is first in line and three short jobs arrive at the same time behind it.",
+      "processes": [
+        {
+          "pid": "P1",
+          "arrival": 0,
+          "burst": 24,
+          "priority": 3
+        },
+        {
+          "pid": "P2",
+          "arrival": 0,
+          "burst": 3,
+          "priority": 1
+        },
+        {
+          "pid": "P3",
+          "arrival": 0,
+          "burst": 3,
+          "priority": 2
+        },
+        {
+          "pid": "P4",
+          "arrival": 0,
+          "burst": 2,
+          "priority": 1
+        }
+      ]
+    }
+  }
+}
